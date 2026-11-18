@@ -1,0 +1,320 @@
+/* ============================================================
+   PROJETO INTEGRADOR - SENAC CLÍNICA ESCOLA
+   ARQUIVO: cadastro/style.css (Enxuto e Didático)
+   ============================================================ */
+
+/* 1. RESET BÁSICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1e293b;
+  background-color: #f8fafc;
+}
+
+/* 2. ESTRUTURA DIVIDIDA EM DUAS COLUNAS */
+.split-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* PAINEL ESQUERDO (Apresentação Visual) */
+.left-panel {
+  width: 40%;
+  min-height: 100vh;
+  position: relative;
+  background: url("https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1200&q=85") center/cover no-repeat;
+  display: flex;
+  align-items: flex-end;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.45));
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 40px;
+  color: #ffffff;
+}
+
+.accent-bar {
+  display: block;
+  width: 35px;
+  height: 4px;
+  background-color: #f78b1f; /* Laranja Senac */
+  border-radius: 2px;
+  margin-bottom: 16px;
+}
+
+.hero-content h1 {
+  font-size: 1.5rem;
+  line-height: 1.35;
+  margin-bottom: 20px;
+}
+
+.specialties {
+  display: flex;
+  gap: 16px;
+  font-size: 0.85rem;
+}
+
+/* PAINEL DIREITO (Formulário) */
+.right-panel {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 650px;
+}
+
+/* 3. CABEÇALHO DO FORMULÁRIO */
+.senac-logo {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #004a8d; /* Azul Senac */
+  letter-spacing: -1px;
+  margin-bottom: 8px;
+}
+
+.back-link {
+  display: inline-block;
+  color: #64748b;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 14px;
+}
+
+.back-link:hover {
+  color: #004a8d;
+}
+
+.form-header h2 {
+  font-size: 1.5rem;
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-bottom: 24px;
+}
+
+/* 4. SEÇÕES E CAMPOS DO FORMULÁRIO */
+.form-section {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 20px;
+  margin-bottom: 16px;
+}
+
+.step-num {
+  display: inline-block;
+  background-color: #eef4fa;
+  color: #004a8d;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: 6px;
+}
+
+.section-info h3 {
+  font-size: 0.9rem;
+  color: #1e293b;
+  margin-bottom: 4px;
+}
+
+.section-info p {
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.fields-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 16px;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.field-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.field-group label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 4px;
+}
+
+input, select {
+  height: 38px;
+  padding: 0 12px;
+  font-size: 0.85rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  outline: none;
+  background-color: #ffffff;
+}
+
+input:focus, select:focus {
+  border-color: #004a8d;
+}
+
+/* Campo de Senha com Botão de Mostrar/Ocultar */
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding-right: 36px;
+}
+
+.btn-eye {
+  position: absolute;
+  right: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* Linha Divisória */
+.divider {
+  border: 0;
+  border-top: 1px solid #f1f5f9;
+  margin: 20px 0;
+}
+
+/* 5. RODAPÉ E BOTÃO DE ENVIAR */
+.form-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.health-note {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  max-width: 380px;
+}
+
+.btn-submit {
+  height: 40px;
+  padding: 0 24px;
+  background-color: #004a8d; /* Azul Senac */
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.btn-submit:hover {
+  background-color: #003366;
+}
+
+.address-footer {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+/* 6. MODAL DE CONFIRMAÇÃO */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-backdrop.active {
+  display: flex;
+}
+
+.modal-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 380px;
+  width: 100%;
+  text-align: center;
+}
+
+.modal-icon {
+  width: 48px;
+  height: 48px;
+  background-color: #dcfce7;
+  color: #16a34a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin: 0 auto 14px;
+}
+
+.modal-card h4 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.modal-card p {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-bottom: 20px;
+}
+
+/* 7. RESPONSIVIDADE (Telas menores) */
+@media (max-width: 768px) {
+  .split-layout {
+    flex-direction: column;
+  }
+  .left-panel {
+    width: 100%;
+    min-height: 240px;
+  }
+  .form-section {
+    grid-template-columns: 1fr;
+  }
+  .fields-grid {
+    grid-template-columns: 1fr;
+  }
+  .form-footer {
+    flex-direction: column;
+  }
+  .btn-submit {
+    width: 100%;
+  }
+}

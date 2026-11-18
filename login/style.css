@@ -1,0 +1,250 @@
+/* ============================================================
+   PROJETO INTEGRADOR - SENAC CLÍNICA ESCOLA
+   ARQUIVO: login/style.css (Enxuto e Didático)
+   ============================================================ */
+
+/* 1. RESET E ESTILO GERAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #233b5b;
+  background-color: #1a1a1a;
+  min-height: 100vh;
+  display: flex;
+}
+
+/* 2. LAYOUT DIVIDIDO EM DUAS COLUNAS */
+.page {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 45% 55%;
+  background: #ffffff;
+}
+
+/* 3. PAINEL ESQUERDO (VISUAL) */
+.visual-panel {
+  position: relative;
+  background-image: 
+    linear-gradient(180deg, rgba(15, 23, 34, 0.2) 30%, rgba(4, 37, 68, 0.95) 100%),
+    url("imagem-clinica.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  display: flex;
+  align-items: flex-end;
+  padding: 40px;
+}
+
+.visual-content {
+  width: 100%;
+}
+
+.orange-line {
+  display: block;
+  width: 40px;
+  height: 4px;
+  background-color: #ff9418; /* Laranja Senac */
+  border-radius: 2px;
+  margin-bottom: 16px;
+}
+
+.visual-content h2 {
+  font-size: 1.5rem;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.areas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 0.85rem;
+  color: #d6e1ee;
+}
+
+.areas span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.areas b {
+  color: #ff9418;
+  font-size: 1rem;
+}
+
+/* 4. PAINEL DIREITO (FORMULÁRIO DE LOGIN) */
+.login-panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background: #ffffff;
+}
+
+.login-content {
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+}
+
+.brand {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #075092; /* Azul Senac */
+  letter-spacing: -1px;
+  margin-bottom: 16px;
+}
+
+.eyebrow {
+  color: #e77e00;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+h1 {
+  font-size: 1.5rem;
+  color: #073867;
+  margin-bottom: 8px;
+}
+
+.intro {
+  color: #647b9c;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin-bottom: 24px;
+}
+
+/* 5. FORMULÁRIO E CAMPOS */
+#login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#login-form label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #273b59;
+  margin-bottom: 4px;
+}
+
+#login-form input {
+  height: 38px;
+  padding: 0 12px;
+  margin-bottom: 14px;
+  border: 1px solid #d8e2ef;
+  border-radius: 6px;
+  outline: none;
+  font-size: 0.85rem;
+  color: #334b6c;
+}
+
+#login-form input:focus {
+  border-color: #075092;
+}
+
+.password-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-wrap input {
+  width: 100%;
+  padding-right: 36px;
+}
+
+.eye-button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.forgot-link {
+  color: #00529a;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  align-self: flex-start;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+/* 6. BOTÕES E RODAPÉ */
+.login-button,
+.register-button {
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.login-button {
+  background-color: #075092; /* Azul Senac */
+}
+
+.register-button {
+  width: 100%;
+  background-color: #ff9418; /* Laranja Senac */
+}
+
+.login-button:hover,
+.register-button:hover {
+  opacity: 0.9;
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 16px 0;
+  color: #8ba0bd;
+  font-size: 0.75rem;
+}
+
+.separator span {
+  flex: 1;
+  height: 1px;
+  background-color: #e6edf5;
+}
+
+footer {
+  margin-top: 28px;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #8ca0bc;
+}
+
+/* 7. RESPONSIVIDADE (Celular e telas menores) */
+@media (max-width: 768px) {
+  .page {
+    grid-template-columns: 1fr;
+  }
+  .visual-panel {
+    min-height: 220px;
+    padding: 24px;
+  }
+  .login-panel {
+    padding: 24px;
+  }
+}

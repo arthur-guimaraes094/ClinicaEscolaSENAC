@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciamento de Usuários | Senac</title>
+  <link rel="stylesheet" href="page3.css">
+  <script src="page3.js" defer></script>
+</head>
+<body>
+
+  <div class="app">
+    <!-- MENU LATERAL (SIDEBAR) -->
+    <aside class="sidebar">
+      <div class="brand">
+        <strong>Senac</strong>
+        <span>CLÍNICA ESCOLA</span>
+      </div>
+
+      <div class="profile-card">
+        <small>Acesso atual</small>
+        <strong>Administrador</strong>
+      </div>
+
+      <p class="menu-label">MENU</p>
+      <nav class="navigation">
+        <a href="#" class="nav-item">▦ Mural de eventos</a>
+        <a href="#" class="nav-item">⊕ Cadastrar evento</a>
+        <a href="#" class="nav-item">▤ Fila de atendimento <span class="notification">1</span></a>
+        <a href="#" class="nav-item active">♙ Usuários</a>
+      </nav>
+
+      <!-- Usuário logado e botão de sair -->
+      <div class="sidebar-user">
+        <div class="avatar">HD</div>
+        <div class="sidebar-user-info">
+          <strong>Profa. Helena Duarte</strong>
+          <small>admin@senac.br</small>
+        </div>
+        <span class="logout" title="Sair do sistema">⇥</span>
+      </div>
+    </aside>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="main">
+      <header class="page-header">
+        <span class="eyebrow">ADMINISTRAÇÃO</span>
+        <h1>Gerenciamento de usuários</h1>
+        <p>Consulte os cadastros ativos e acompanhe os níveis de acesso.</p>
+      </header>
+
+      <section class="content-panel">
+        <!-- BARRA DE BUSCA E FILTROS -->
+        <div class="toolbar">
+          <div class="search-box">
+            <span>⌕</span>
+            <input id="searchInput" type="text" placeholder="Buscar por nome, e-mail ou CPF">
+          </div>
+          <div class="filters">
+            <button class="filter active" data-filter="Todos">Todos <span id="countTodos">13</span></button>
+            <button class="filter" data-filter="Modelo">Modelos <span id="countModelos">0</span></button>
+            <button class="filter" data-filter="Aluno">Alunos <span id="countAlunos">0</span></button>
+            <button class="filter" data-filter="Administrador">Admins <span id="countAdmins">0</span></button>
+          </div>
+        </div>
+
+        <!-- TABELA DE USUÁRIOS -->
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>USUÁRIO</th>
+                <th>CPF</th>
+                <th>NÍVEL DE ACESSO</th>
+                <th>AÇÕES</th>
+              </tr>
+            </thead>
+            <tbody id="userTable"></tbody>
+          </table>
+          <div class="empty-state" id="emptyState" hidden>Nenhum usuário encontrado.</div>
+        </div>
+
+        <div class="table-footer" id="tableFooter">13 usuários exibidos</div>
+      </section>
+    </main>
+  </div>
+
+</body>
+</html>

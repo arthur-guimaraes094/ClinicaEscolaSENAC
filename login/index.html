@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Senac Clínica Escola | Login</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <main class="page">
+    <!-- PAINEL ESQUERDO (APRESENTAÇÃO VISUAL) -->
+    <section class="visual-panel">
+      <div class="visual-content">
+        <span class="orange-line"></span>
+        <h2>Aprender cuidando.<br>Atendimentos supervisionados<br>por quem ensina.</h2>
+        <div class="areas">
+          <span><b>♧</b> Estética</span>
+          <span><b>♙</b> Podologia</span>
+          <span><b>⚒</b> Massoterapia</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAINEL DIREITO (FORMULÁRIO DE LOGIN) -->
+    <section class="login-panel">
+      <div class="login-content">
+        <!-- Logo e Boas-Vindas -->
+        <div class="brand">Senac</div>
+        <p class="eyebrow">BEM-VINDO(A)</p>
+        <h1>Senac Clínica Escola</h1>
+        <p class="intro">Acesse com seu login para acompanhar eventos e atendimentos.</p>
+
+        <!-- Formulário de Login -->
+        <form id="login-form">
+          <label for="login">Login ou e-mail</label>
+          <input id="login" name="login" type="text" placeholder="seu@email.com ou CPF" required>
+
+          <label for="password">Senha</label>
+          <div class="password-wrap">
+            <input id="password" name="password" type="password" placeholder="Digite sua senha" required>
+            <button class="eye-button" type="button" id="toggle-password" title="Mostrar/Ocultar senha">👁</button>
+          </div>
+
+          <a class="forgot-link" href="#" id="forgot-password">Esqueci a senha</a>
+          <button class="login-button" type="submit">Entrar</button>
+        </form>
+
+        <!-- Separador -->
+        <div class="separator">
+          <span></span>
+          <small>Ainda não tem conta?</small>
+          <span></span>
+        </div>
+
+        <!-- Botão para Tela de Cadastro -->
+        <button class="register-button" id="register-button" type="button" onclick="ir_cadastro()">
+          <span>♧</span> Fazer Cadastro
+        </button>
+
+        <footer>Senac RN · R. São Tomé, 444 – Cidade Alta, Natal/RN</footer>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>

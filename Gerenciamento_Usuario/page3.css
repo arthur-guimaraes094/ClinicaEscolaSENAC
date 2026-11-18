@@ -1,0 +1,363 @@
+/* ============================================================
+   PROJETO INTEGRADOR - SENAC CLÍNICA ESCOLA
+   ARQUIVO: Gerenciamento_Usuario/page3.css (Enxuto e Didático)
+   ============================================================ */
+
+/* 1. RESET E ESTILO GERAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f1f4f8;
+  color: #172b45;
+  font-size: 13px;
+}
+
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* 2. MENU LATERAL (SIDEBAR) */
+.sidebar {
+  width: 220px;
+  background: linear-gradient(180deg, #064579, #06335f);
+  color: #ffffff;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+}
+
+.brand {
+  margin-bottom: 20px;
+}
+
+.brand strong {
+  font-size: 22px;
+  letter-spacing: -1px;
+}
+
+.brand span {
+  display: block;
+  font-size: 9px;
+  color: #c8d9e9;
+  letter-spacing: 1px;
+}
+
+.profile-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.profile-card small {
+  display: block;
+  font-size: 10px;
+  color: #9bb8d2;
+}
+
+.profile-card strong {
+  font-size: 12px;
+}
+
+.menu-label {
+  font-size: 10px;
+  color: #9bb8d2;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  color: #d4e2ef;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.nav-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-item.active {
+  background: #ffffff;
+  color: #07518e;
+  font-weight: 700;
+}
+
+.notification {
+  margin-left: auto;
+  background: #f78b1f; /* Laranja Senac */
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 10px;
+}
+
+.sidebar-user {
+  margin-top: auto;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  background: #f78b1f;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 11px;
+}
+
+.sidebar-user-info strong {
+  display: block;
+  font-size: 11px;
+}
+
+.sidebar-user-info small {
+  font-size: 9px;
+  color: #9bb8d2;
+}
+
+.logout {
+  margin-left: auto;
+  font-size: 18px;
+  cursor: pointer;
+  color: #c4d7e8;
+}
+
+.logout:hover {
+  color: #ffffff;
+}
+
+/* 3. CONTEÚDO PRINCIPAL */
+.main {
+  margin-left: 220px;
+  flex: 1;
+  padding: 30px;
+}
+
+.page-header {
+  margin-bottom: 20px;
+}
+
+.eyebrow {
+  color: #f78b1f;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.page-header h1 {
+  font-size: 24px;
+  color: #142d4b;
+  margin: 5px 0;
+}
+
+.page-header p {
+  color: #77869b;
+  font-size: 13px;
+}
+
+/* 4. PAINEL DE CONTEÚDO E FILTROS */
+.content-panel {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding-bottom: 15px;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  border-bottom: 1px solid #edf0f4;
+  gap: 15px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #dce3eb;
+  border-radius: 6px;
+  padding: 6px 12px;
+  width: 300px;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 12px;
+}
+
+.filters {
+  display: flex;
+  gap: 6px;
+}
+
+.filter {
+  background: transparent;
+  border: 1px solid transparent;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  color: #697b91;
+}
+
+.filter.active {
+  background: #07518e;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* 5. TABELA DE USUÁRIOS */
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th {
+  padding: 12px 20px;
+  color: #8090a3;
+  font-size: 11px;
+  border-bottom: 1px solid #edf0f4;
+}
+
+td {
+  padding: 12px 20px;
+  border-bottom: 1px solid #f0f2f5;
+  font-size: 12px;
+}
+
+tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+.user-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #eaf4fc;
+  color: #0871bd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.user-avatar.orange {
+  background: #fff3e4;
+  color: #f78b1f;
+}
+
+.role {
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.role-modelo {
+  background: #fff3e4;
+  color: #f78b1f;
+}
+
+.role-aluno {
+  background: #eaf4fc;
+  color: #07518e;
+}
+
+.role-admin {
+  background: #f2eaff;
+  color: #803ee0;
+}
+
+.action-button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #8090a3;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.action-button:hover {
+  background: #edf0f4;
+}
+
+.table-footer {
+  padding: 15px 20px 5px;
+  font-size: 11px;
+  color: #8996a8;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 30px;
+  color: #8290a2;
+}
+
+/* 6. RESPONSIVIDADE */
+@media (max-width: 768px) {
+  .app {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    position: relative;
+    height: auto;
+  }
+  .main {
+    margin-left: 0;
+    padding: 15px;
+  }
+  .toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .search-box {
+    width: 100%;
+  }
+}
